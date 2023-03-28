@@ -232,7 +232,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法</a>
+          <a href="/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">高数笔记一：关于「函数极限和连续」的几种典型问题的处理方法</a>
         </h2>
 
         <div class="post-meta-container">
@@ -270,91 +270,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <p>复习「函数极限和连续」相关知识点和例习题时，遇到了4种需要注意的情况：</p>
-<ul>
-<li><p>1 复合函数和积分的等价无穷小问题</p>
-</li>
-<li><p>2 含$\lim\limits_{n\to\infty}$函数的间断点问题</p>
-</li>
-<li><p>3 函数极限的存在性问题</p>
-<ul>
-<li>3.1 具体型</li>
-<li>3.2 抽象型</li>
-</ul>
-</li>
-<li><p>4 反函数问题</p>
-</li>
-</ul>
-<p>下面对这4种情形进行讨论。</p>
-<hr>
-<h3 id="1-复合函数和积分的等价无穷小问题"><a href="#1-复合函数和积分的等价无穷小问题" class="headerlink" title="1 复合函数和积分的等价无穷小问题"></a>1 复合函数和积分的等价无穷小问题</h3><p>首先来看这个例题（摘自《18讲》P15习题1.13）</p>
-<blockquote>
-<p>已知当$x\to0$时，$\mathnormal{f(x)}\sim\mathnormal{ax^m}$，$\mathnormal{g(x)}\sim\mathnormal{bx^n}$，且$f(x)$，$g(x)$，$a$，$b$均不为0，证明$$f[g(x)]\sim\mathnormal{ab^mx^{mn}}(x\to0).$$<br>【证】$\lim\limits_{x\to0}\dfrac{f[g(x)]}{x^{mn}}&#x3D;\lim\limits_{x\to0}{\dfrac{f[g(x)]}{a[g(x)^m]}\cdotp\dfrac{[g(x)]^m}{(bx^n)^m}\cdotp\mathnormal{ab^{mn}}}&#x3D;ab^m$，故$$f[g(x)]\sim\mathnormal{ab^mx^{mn}}(x\to0).$$</p>
-</blockquote>
-<p>通过等价无穷小比阶+连乘消元的方式证明，避免了更加繁琐的、列写高阶无穷小的等式证明方法。<br>可以得出的结论是：<strong>复合函数的等价无穷小可以通过把自变量函数以等价无穷小的形式代入复合函数的等价无穷小中所得</strong>。<br>值得注意的是，<strong>自变量$x$的阶数是&#x3D;&#x3D;乘积&#x3D;&#x3D;关系而非加和关系</strong>。</p>
-<p>利用这个结论，我们来看下一个例题（摘自《660题》P11习题21）</p>
-<blockquote>
-<p>已知当$x\to0$时$F(x)&#x3D;\int_{0}^{x-sinx}\text{ln}(1+t)\text{d}t$是$x^n$的同阶无穷小，则$n$&#x3D;____.</p>
-<p>【解】$F(x)&#x3D;\int_{0}^{x-sinx}\text{ln}(1+t)\text{d}t$由$F(x)&#x3D;\int_{0}^{u}\text{ln}(1+t)\text{d}t$和$u&#x3D;x-sinx$复合而成，当$x\to0$时，$\text{ln}(1+t)\sim{x}$,所以$F(x)&#x3D;\int_{0}^{u}\text{ln}(1+t)\text{d}t$与$x^2$同阶，而$x-sinx\sim{\dfrac{1}{6}x^3}$,由结论可知，$F(x)&#x3D;\int_{0}^{x-sinx}\ln(1+t)\text{d}t$是$x$的$2\times3&#x3D;6$阶无穷小。</p>
-</blockquote>
-<p>可见对于选填小题，利用复合函数的等价无穷小结论可以快速准确地得出答案。如果是解答题的情况，采用洛必达求取n值，则会相对复杂。</p>
-<hr>
-<h3 id="2-含-lim-limits-n-to0-函数的间断点问题"><a href="#2-含-lim-limits-n-to0-函数的间断点问题" class="headerlink" title="2 含$\lim\limits_{n\to0}$函数的间断点问题"></a>2 含$\lim\limits_{n\to0}$函数的间断点问题</h3><p>引例（摘自《1000题》P7习题6）</p>
-<blockquote>
-<p>设函数$f(x)&#x3D;\lim\limits_{n\to\infty}\text{cos}^n\frac{1}{n^x}(0&lt;x&lt;+\infty)$，则$f(x)$在其间断点处的值等于______.</p>
-<p>【解】当$n\to\infty$时，$$\text{ln}\Big[1+\Big(\text{cos}\frac{1}{n^x}-1\Big)\Big]\sim \text{cos}\frac{1}{n^x}-1\sim -\frac{1}{2}\Big(\frac{1}{n^x}\Big)^2&#x3D;-\frac{1}{2}\cdotp\frac{1}{n^{2x}}，$$<br>所以$\lim\limits_{n\to\infty}\text{cos}^n\frac{1}{n^x}&#x3D;e^{\lim\limits_{n\to\infty}n\text{ln}[1+(\text{cos}\frac{1}{n^x}-1)]}&#x3D;e^{-\frac{1}{2}\lim\limits_{n\to\infty}\frac{1}{n^{2x-1}}}$，因此$$f(x)\begin{cases}<br>  0，&amp;0&lt;x&lt;\dfrac{1}{2}，\\\dfrac{1}{\sqrt{e}}，&amp;x&#x3D;\dfrac{1}{2}，\\1，&amp;x&gt;\dfrac{1}{2}.<br>\end{cases}$$<br>故$f(x)$在其定义区间内由唯一的间断点$x_0&#x3D;\dfrac{1}{2}$，且$f(x_0)&#x3D;\dfrac{1}{\sqrt{e}}$.</p>
-</blockquote>
-<p>可见在处理含有$\lim\limits_{n\to\infty}$函数的间断点问题时，可以分为以下几个步骤：<br>1.<strong>找到原函数的所有间断点</strong>，这个过程在面对无法直观判断间断点的函数时可能需要对原函数进行等价无穷小的化简<br>2.在间断点划分出的连续区间内，<strong>消除含有n的部分，将原函数化简为分段函数的形式</strong><br>3.对间断点进行<strong>类型判断</strong></p>
-<p>解题关键和难点步骤在于第1步找出所有的间断点。一般情况下可以利用如下2种判断依据：<br>1.使分母为0的<strong>无意义点</strong><br>2.<strong>与n相关</strong>并影响函数具体形式的点</p>
-<p>循着这个思路和方法，我们来看下一个例题(摘自《1000题》P6习题37)</p>
-<blockquote>
-<p>已知$f(x)&#x3D;\lim\limits_{n\to\infty}\dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1}$是连续函数，求$a$，$b$的值.</p>
-<p>【解】当$x&#x3D;1$时，$f(x)&#x3D;\lim\limits_{n\to\infty}\dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1}&#x3D;\dfrac{1+a+b}{2}$；</p>
-<p>当$|x|&lt;1$时，$f(x)&#x3D;\lim\limits_{n\to\infty}\dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1}&#x3D;\dfrac{ax^2+bx}{1}&#x3D;ax^2+bx$；</p>
-<p>当$|x|&gt;1$时，$f(x)&#x3D;\lim\limits_{n\to\infty}\dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1}&#x3D;\dfrac{\frac{1}{x}+a\frac{1}{x^{2n-2}}+b\frac{1}{x^{2n-1}}}{1+\frac{1}{x^{2n}}}&#x3D;\dfrac{1}{x}$；</p>
-<p>当$x&#x3D;-1$时，$f(x)&#x3D;\lim\limits_{n\to\infty}\dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1}&#x3D;\dfrac{-1+a-b}{2}$；</p>
-<p>于是$f(x)&#x3D;\begin{cases}<br>  ax^2+bx，&amp;|x|&lt;1，\\\dfrac{1}{x}，&amp;|x|&gt;1，\\\dfrac{1+a+b}{2}，&amp;x&#x3D;1，\\\dfrac{a-b-1}{2}，&amp;x&#x3D;-1.<br>\end{cases}$只需讨论分断点处的连续性：</p>
-<p>在$x&#x3D;1$处，有$\lim\limits_{x\to1^+}f(x)&#x3D;\lim\limits_{x\to1^+}\frac{1}{x}&#x3D;1$，$\lim\limits_{x\to1^-}f(x)&#x3D;\lim\limits_{x\to1^-}(ax^2+bx)&#x3D;a+b$，$f(1)&#x3D;\frac{1+a+b}{2}$.要使$f(x)$在$x&#x3D;1$处连续，则$a+b&#x3D;1$；</p>
-<p>在$x&#x3D;-1$处，有$\lim\limits_{x\to(-1)^-}f(x)&#x3D;\lim\limits_{x\to(-1)^-}\frac{1}{x}&#x3D;-1$，$\lim\limits_{x\to(-1)^+}f(x)&#x3D;\lim\limits_{x\to(-1)^+}(ax^2+bx)&#x3D;a-b$，$f(-1)&#x3D;\frac{a-b-1}{2}$.要使$f(x)$在$x&#x3D;-1$处连续，则$a-b&#x3D;-1$.</p>
-<p>综上可得，当$a&#x3D;0$，$b&#x3D;1$时，$f(x)&#x3D;\lim\limits_{n\to\infty}\dfrac{x^{2n-1}+ax^2+bx}{x^{2n}+1}$是连续函数.</p>
-</blockquote>
-<hr>
-<h3 id="3-函数极限的存在性问题"><a href="#3-函数极限的存在性问题" class="headerlink" title="3 函数极限的存在性问题"></a>3 函数极限的存在性问题</h3><h4 id="3-1-具体型"><a href="#3-1-具体型" class="headerlink" title="3.1 具体型"></a>3.1 具体型</h4><p>若给出具体函数求极限，但极限不满足洛必达法则三个条件中的至少一个：(1)$“\frac{0}{0}”$型或$“\frac{\infty}{\infty}”$型；(2)分子分母均可导；(3)结果为$0$，$c(c\ne0)$，$\infty$，则洛必达法则失效，可考虑用夹逼准则.</p>
-<p>下面来看这个例题(摘自《18讲》P10例1.14)</p>
-<blockquote>
-<p>设函数$S(x)&#x3D;\int_{0}^{x}|\text{cos}\space t|\text{d}t.$<br>(1)当$n$为正整数，且$n\pi\leqslant x&lt;(n+1)\pi$时，证明$2n\leqslant S(x)&lt;2(n+1)$；<br>(2)求$\lim\limits_{x\to+\infty}\frac{S(x)}{x}.$</p>
-<p>(1)【证】因为$|\text{cos}\space x|\geqslant0$，且当$n\pi\leqslant x&lt;(n+1)\pi$时，$$\int_{0}^{n\pi}|\text{cos}\space x|\text{d}x\leqslant S(x)&lt;\int_{0}^{(n+1)\pi}|\text{cos}\space x|\text{d}x.$$<br>又因为$|\text{cos}x|$是以$\pi$为周期的函数，在每个周期上积分值相等，所以$$\int_{0}^{n\pi}|\text{cos}\space x|\text{d}x&#x3D;n\int_{0}^{\pi}|\text{cos}\space x|\text{d}x&#x3D;2n，$$$$\int_{0}^{(n+1)\pi}|\text{cos}\space x|\text{d}x&#x3D;2(n+1)，$$<br>因此，当$n\pi\leqslant x&lt;(n+1)\pi$时，有$2n\leqslant S(x)&lt;2(n+1).$<br>(2)【解】由(1)知，当$n\pi\leqslant x&lt;(n+1)\pi$时，有$\dfrac{2n}{(n+1)\pi}&lt;\dfrac{S(x)}{x}&lt;\dfrac{2(n+1)}{n\pi}.$</p>
-<p>令$x\to+\infty$，则$n\to\infty$，由夹逼准则得$\lim\limits_{x\to+\infty}\dfrac{S(x)}{x}&#x3D;\dfrac{2}{\pi}.$</p>
-</blockquote>
-<p>这种情形下，使用夹逼准则的要点在于：<br>1.<strong>利用自变量的范围推算题设所要求的值范围</strong>，一般可能需要<strong>利用周期函数的特性</strong>来确定这个范围<br>2.<strong>再次利用自变量的范围</strong>进行放缩和夹逼</p>
-<p>循着这个思路，我们来看下一个例题(摘自《18讲》P16习题1.15)</p>
-<blockquote>
-<p>设$x\geqslant0$，记$x$到$2k$的最小距离为$f(x)，k&#x3D;0,1,2\cdots.$<br>(1)证明$f(x)$以2为周期，并写出其在$[0,2]$上的表达式；<br>(2)求$\lim\limits_{x\to+\infty}\dfrac{\int_{0}^{x}f(x)\text{d}t}{x}.$</p>
-<p>【证】依题意，$f(x)&#x3D;\text{min}{|x-2k|}(k&#x3D;0,1,2\cdots)$<br>当$x\geqslant0$时，<br>$f(x+2)&#x3D;\text{min}{|(x+2)-2k|}&#x3D;\text{min}{|x-2(k-1)|}&#x3D;f(x)(k&#x3D;0,1,2\cdots),$故$f(x)$是以2为周期的函数.其在$[0,2]$上的表达式为$$f(x)&#x3D;\text{min}{|x-2k|}&#x3D;\begin{cases}<br>  x,&amp;0\leqslant x&lt;1(k&#x3D;0),\2-x,&amp;1\leqslant x\leqslant2(k&#x3D;1).<br>\end{cases}$$<br>故$f(x)$的图像如图所示.</p>
-<div align="center"><img src="/.io//desmos-graph.png" width="300"></div>
-
-<p>(2)【解】当$2n\leqslant x&lt;2n+2$时，<br>$$n&#x3D;\int_{0}^{2n}f(t)\text{d}t\leqslant \int_{0}^{x}f(t)\text{d}t\leqslant \int_{0}^{2n+2}f(t)\text{d}t&#x3D;n+1,$$<br>故$$\dfrac{n}{2n+2}&#x3D;\dfrac{1}{2n+2}\int_{0}^{2n}f(t)\text{d}t&lt;\dfrac{1}{x}\int_{0}^{x}f(t)\text{d}t&lt;\dfrac{1}{2n}\int_{0}^{2n+2}f(t)\text{d}t&#x3D;\dfrac{n+1}{2n},$$<br>当$x\to+\infty$时，$n\to\infty$，由夹逼准则，有$\lim\limits_{x\to+\infty}\dfrac{\int_{0}^{x}f(x)\text{d}t}{x}&#x3D;\dfrac{1}{2}.$</p>
-</blockquote>
-<p>可见如何依题意得出周期函数的正确表达式，并通过写成分段函数形式或利用函数图像辅助理解该函数的特性，是利用自变量范围推算积分值范围的先导和关键。</p>
-<h4 id="3-2-抽象型"><a href="#3-2-抽象型" class="headerlink" title="3.2 抽象型"></a>3.2 抽象型</h4><p>若给出抽象函数求极限，可考虑用单调有界准则：若$x\to+\infty$时，$f(x)$单调增加(减少)且$f(x)$有上界(下界)，则$\lim\limits_{x\to+\infty}f(x)$存在.</p>
-<p>来看这个引例(摘自《18讲》P11例1.16)</p>
-<blockquote>
-<p>(1)证明：当$x\geqslant1$时，$\dfrac{1}{1+x}&lt;\text{ln}\Big(1+\dfrac{1}{x}\Big)&lt;\dfrac{1}{x}$；<br>(2)设函数$f(x)$在区间$[1,+\infty)$上连续可导，且$$f^{\prime}(x)&#x3D;\dfrac{1}{1+f^2(x)}\bigg[\sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}\bigg].$$<br>证明：$\lim\limits_{x\to+\infty}f(x)$存在.</p>
-<p>【证】当$x\geqslant1$时，对$\text{ln}t$在$[x,x+1]$上应用拉格朗日中值定理，有$$\text{ln}(x+1)-\text{ln}(x)&#x3D;\frac{1}{\xi}，x&lt;\xi&lt;x+1，$$即$$\dfrac{1}{x+1}&lt;\text{ln}\Big(1+\dfrac{1}{x}\Big)&lt;\dfrac{1}{x}.$$<br>(2)由(1)知，$\sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}&gt;0$，又$\dfrac{1}{1+f^2(x)}&gt;0$，故$f^{\prime}(x)&gt;0$，于是$x\geqslant1$时$f(x)$严格单调增加，又$$f^{\prime}(x)\leqslant \sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}&lt;\sqrt{\dfrac{1}{x}}-\sqrt{\dfrac{1}{1+x}}，$$<br>上式两边从$1$到$x$积分，有$$\int_{1}^{x}f^{\prime}(x)\text{d}t<br>&#x3D; f(x)-f(1)\leqslant \int_{1}^{x}\Big(\sqrt{\dfrac{1}{t}}-\sqrt{\dfrac{1}{1+t}}\Big)\text{d}t<br>&lt;\int_{1}^{+\infty}\Big(\sqrt{\dfrac{1}{t}}-\sqrt{\dfrac{1}{1+t}}\Big)\text{d}t<br>&#x3D; 2(\sqrt{2}-1)，$$<br>即$$f(x)&lt;2(\sqrt{2}-1)+f(1)，$$<br>故$f(x)$有上界.由单调有界准则，知$\lim\limits_{x\to+\infty}f(x)$存在.</p>
-</blockquote>
-<p>抽象型的极限存在性问题，通常有以下4个步骤：<br>1.利用题设所给的导函数和原函数的关系得出<strong>单调性</strong><br>2.再次利用导函数和原函数的关系和单调性得出<strong>关于导函数的不等式(不等式右边可适当放缩便于后续积分)</strong><br>3.对不等式两边进行积分，其中导函数的这一边利用<strong>牛顿-莱布尼茨公式</strong>写成函数值的差，另一边计算积分得出一个存在上界&#x2F;下界的函数<br>4.移项得出原函数存在上界&#x2F;下界</p>
-<p>依据这个思路，我们来看下一个例题(摘自《1000题》P7习题14)</p>
-<blockquote>
-<p>设$x\geqslant0$时，$f(x)$满足$f^{\prime}(x)&#x3D;\dfrac{1}{x^2+f^2(x)}$，且$f(0)&#x3D;1$，证明：$\lim\limits_{x\to+\infty}f(x)$存在.<br>【解】由$f^{\prime}(x)&gt;0$可知，$f(x)$单调增加.又$f(0)&#x3D;1$，所以，当$x\geqslant0$时，$f(x)\geqslant1$，于是有$$f^{\prime}(x)\leqslant\dfrac{1}{1+x^2}(x\geqslant0).$$<br>于是$$f(x)-f(0)&#x3D;\int_{0}^{x}f^{\prime}(x)\text{d}t\leqslant\int_{0}^{x}\dfrac{\text{d}t}{1+t^2}&#x3D;\text{arctan}\space x(x\geqslant0)，$$<br>故$$f(x)\leqslant1+\text{arctan}\space x&lt;1+\dfrac{\pi}{2}.$$<br>由单调有界准则知，极限$\lim\limits_{x\to+\infty}f(x)$存在.</p>
-</blockquote>
-<hr>
-<h3 id="4-反函数问题"><a href="#4-反函数问题" class="headerlink" title="4 反函数问题"></a>4 反函数问题</h3><p>反函数问题较为新颖，目前样本较少。<br>引例(摘自《1000题》P7习题7)</p>
-<blockquote>
-<p>记$f(x)&#x3D;27x^3+5x^2-2$的反函数为$f^{-1}$，求极限：$\lim\limits_{x\to\infty}\dfrac{f^{-1}(27x)-f^{-1}(x)}{\sqrt[3]{x}}.$<br>【解】依题意，显然有$\lim\limits_{x\to\infty}\dfrac{f(x)}{x^3}&#x3D;27.$<br>先令$y&#x3D;f^{-1}(x)$，则$x&#x3D;f(y)$，且当$x\to\infty$时$y\to\infty$，所以$$\lim\limits_{x\to\infty}\dfrac{f^{-1}(x)}{\sqrt[3]{x}}&#x3D;\lim\limits_{x\to\infty}\dfrac{y}{\sqrt[3]{f(y)}}&#x3D;\sqrt[3]{\lim\limits_{x\to\infty}\dfrac{y^3}{f(y)}}&#x3D;\sqrt[3]{\dfrac{1}{27}}&#x3D;\dfrac{1}{3}.$$<br>同理，先令$t&#x3D;27x$，再令$y&#x3D;f^{-1}(x)$，则当$x\to\infty$时$t\to\infty$，$y\to\infty$,所以$$\lim\limits_{x\to\infty}\dfrac{f^{-1}(27x)}{\sqrt[3]{x}}&#x3D;3\lim\limits_{x\to\infty}\dfrac{f^{-1}(t)}{\sqrt[3]{t}}&#x3D;3\lim\limits_{x\to\infty}\dfrac{y}{\sqrt[3]{f(y)}}&#x3D;3\sqrt[3]{\lim\limits_{x\to\infty}\dfrac{y^3}{f(y)}}&#x3D;3\sqrt[3]{\dfrac{1}{27}}&#x3D;1.$$</p>
-<p>因此，原式$&#x3D;1-\dfrac{1}{3}&#x3D;\dfrac{2}{3}.$</p>
-</blockquote>
-<p>可见，解题的关键在于通过$y&#x3D;f^{-1}(x)$和$x&#x3D;f(y)$的变量代换将$\dfrac{f^{-1}(x)}{x}$转变为$\dfrac{y}{f(y)}$，从而进行后续的处理。</p>
-
+          <p>“万事开头难。”</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 

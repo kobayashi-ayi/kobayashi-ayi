@@ -21,30 +21,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"kobayashi-ayi.github.io","root":"/","images":"/images","scheme":"Muse","darkmode":false,"version":"8.14.2","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12},"copycode":{"enable":false,"style":null},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="复习「函数极限和连续」相关知识点和例习题时，遇到了4种需要注意的情况：  1 复合函数和积分的等价无穷小问题  2 含$\lim\limits_{n\to\infty}$函数的间断点问题  3 函数极限的存在性问题  3.1 具体型 3.2 抽象型   4 反函数问题   下面对这4种情形进行讨论。  1 复合函数和积分的等价无穷小问题首先来看这个例题（摘自《18讲》P15习题1.13）  已知当">
+    <meta name="description" content="“万事开头难。”">
 <meta property="og:type" content="article">
-<meta property="og:title" content="高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法">
+<meta property="og:title" content="高数笔记一：关于「函数极限和连续」的几种典型问题的处理方法">
 <meta property="og:url" content="https://kobayashi-ayi.github.io/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/index.html">
 <meta property="og:site_name" content="FM小林">
-<meta property="og:description" content="复习「函数极限和连续」相关知识点和例习题时，遇到了4种需要注意的情况：  1 复合函数和积分的等价无穷小问题  2 含$\lim\limits_{n\to\infty}$函数的间断点问题  3 函数极限的存在性问题  3.1 具体型 3.2 抽象型   4 反函数问题   下面对这4种情形进行讨论。  1 复合函数和积分的等价无穷小问题首先来看这个例题（摘自《18讲》P15习题1.13）  已知当">
+<meta property="og:description" content="“万事开头难。”">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://kobayashi-ayi.github.io/.io//desmos-graph.png">
+<meta property="og:image" content="https://kobayashi-ayi.github.io/images/desmos-graph.png">
 <meta property="article:published_time" content="2023-03-27T16:00:00.000Z">
-<meta property="article:modified_time" content="2023-03-27T20:12:11.723Z">
+<meta property="article:modified_time" content="2023-03-28T07:47:40.591Z">
 <meta property="article:author" content="ayi小林意">
 <meta property="article:tag" content="学习笔记">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://kobayashi-ayi.github.io/.io//desmos-graph.png">
+<meta name="twitter:image" content="https://kobayashi-ayi.github.io/images/desmos-graph.png">
 
 
 <link rel="canonical" href="https://kobayashi-ayi.github.io/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://kobayashi-ayi.github.io/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/","path":"2023/03/28/高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法/","title":"高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://kobayashi-ayi.github.io/2023/03/28/%E9%AB%98%E6%95%B0%E7%AC%94%E8%AE%B0%E4%B8%80%EF%BC%9A%E5%85%B3%E4%BA%8E%E3%80%8C%E5%87%BD%E6%95%B0%E6%9E%81%E9%99%90%E5%92%8C%E8%BF%9E%E7%BB%AD%E3%80%8D%E7%9A%84%E5%87%A0%E4%B8%AA%E5%85%B8%E5%9E%8B%E9%97%AE%E9%A2%98%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/","path":"2023/03/28/高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法/","title":"高数笔记一：关于「函数极限和连续」的几种典型问题的处理方法"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法 | FM小林</title>
+<title>高数笔记一：关于「函数极限和连续」的几种典型问题的处理方法 | FM小林</title>
   
 
 
@@ -234,12 +234,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法 | FM小林">
-      <meta itemprop="description" content="">
+      <meta itemprop="name" content="高数笔记一：关于「函数极限和连续」的几种典型问题的处理方法 | FM小林">
+      <meta itemprop="description" content="“万事开头难。”">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          高数笔记一：关于「函数极限和连续」的几个典型问题的处理方法
+          高数笔记一：关于「函数极限和连续」的几种典型问题的处理方法
         </h1>
 
         <div class="post-meta-container">
@@ -270,6 +270,7 @@
   
 </div>
 
+            <div class="post-description">“万事开头难。”</div>
         </div>
       </header>
 
@@ -298,7 +299,7 @@
 <blockquote>
 <p>已知当$x\to0$时，$\mathnormal{f(x)}\sim\mathnormal{ax^m}$，$\mathnormal{g(x)}\sim\mathnormal{bx^n}$，且$f(x)$，$g(x)$，$a$，$b$均不为0，证明$$f[g(x)]\sim\mathnormal{ab^mx^{mn}}(x\to0).$$<br>【证】$\lim\limits_{x\to0}\dfrac{f[g(x)]}{x^{mn}}&#x3D;\lim\limits_{x\to0}{\dfrac{f[g(x)]}{a[g(x)^m]}\cdotp\dfrac{[g(x)]^m}{(bx^n)^m}\cdotp\mathnormal{ab^{mn}}}&#x3D;ab^m$，故$$f[g(x)]\sim\mathnormal{ab^mx^{mn}}(x\to0).$$</p>
 </blockquote>
-<p>通过等价无穷小比阶+连乘消元的方式证明，避免了更加繁琐的、列写高阶无穷小的等式证明方法。<br>可以得出的结论是：<strong>复合函数的等价无穷小可以通过把自变量函数以等价无穷小的形式代入复合函数的等价无穷小中所得</strong>。<br>值得注意的是，<strong>自变量$x$的阶数是&#x3D;&#x3D;乘积&#x3D;&#x3D;关系而非加和关系</strong>。</p>
+<p>通过等价无穷小比阶+连乘消元的方式证明，避免了更加繁琐的、列写高阶无穷小的等式证明方法。<br>可以得出的结论是：<strong>复合函数的等价无穷小可以通过把自变量函数以等价无穷小的形式代入复合函数的等价无穷小中所得</strong>。<br>值得注意的是，<strong>自变量$x$的阶数是乘积关系而非加和关系</strong>。</p>
 <p>利用这个结论，我们来看下一个例题（摘自《660题》P11习题21）</p>
 <blockquote>
 <p>已知当$x\to0$时$F(x)&#x3D;\int_{0}^{x-sinx}\text{ln}(1+t)\text{d}t$是$x^n$的同阶无穷小，则$n$&#x3D;____.</p>
@@ -337,8 +338,8 @@
 <p>循着这个思路，我们来看下一个例题(摘自《18讲》P16习题1.15)</p>
 <blockquote>
 <p>设$x\geqslant0$，记$x$到$2k$的最小距离为$f(x)，k&#x3D;0,1,2\cdots.$<br>(1)证明$f(x)$以2为周期，并写出其在$[0,2]$上的表达式；<br>(2)求$\lim\limits_{x\to+\infty}\dfrac{\int_{0}^{x}f(x)\text{d}t}{x}.$</p>
-<p>【证】依题意，$f(x)&#x3D;\text{min}{|x-2k|}(k&#x3D;0,1,2\cdots)$<br>当$x\geqslant0$时，<br>$f(x+2)&#x3D;\text{min}{|(x+2)-2k|}&#x3D;\text{min}{|x-2(k-1)|}&#x3D;f(x)(k&#x3D;0,1,2\cdots),$故$f(x)$是以2为周期的函数.其在$[0,2]$上的表达式为$$f(x)&#x3D;\text{min}{|x-2k|}&#x3D;\begin{cases}<br>  x,&amp;0\leqslant x&lt;1(k&#x3D;0),\2-x,&amp;1\leqslant x\leqslant2(k&#x3D;1).<br>\end{cases}$$<br>故$f(x)$的图像如图所示.</p>
-<div align="center"><img src="/.io//desmos-graph.png" width="300"></div>
+<p>【证】依题意，$f(x)&#x3D;\text{min}{|x-2k|}(k&#x3D;0,1,2\cdots)$<br>当$x\geqslant0$时，<br>$f(x+2)&#x3D;\text{min}{|(x+2)-2k|}&#x3D;\text{min}{|x-2(k-1)|}&#x3D;f(x)(k&#x3D;0,1,2\cdots),$故$f(x)$是以2为周期的函数.其在$[0,2]$上的表达式为<br>$$f(x)&#x3D;\text{min}{|x-2k|}&#x3D;\begin{cases}<br>  x,&amp;0\leqslant x&lt;1(k&#x3D;0)，\\2-x,&amp;1\leqslant x\leqslant2(k&#x3D;1).<br>\end{cases}$$<br>故$f(x)$的图像如图所示.</p>
+<div align="center"><img src="/images/desmos-graph.png" width="300"></div>
 
 <p>(2)【解】当$2n\leqslant x&lt;2n+2$时，<br>$$n&#x3D;\int_{0}^{2n}f(t)\text{d}t\leqslant \int_{0}^{x}f(t)\text{d}t\leqslant \int_{0}^{2n+2}f(t)\text{d}t&#x3D;n+1,$$<br>故$$\dfrac{n}{2n+2}&#x3D;\dfrac{1}{2n+2}\int_{0}^{2n}f(t)\text{d}t&lt;\dfrac{1}{x}\int_{0}^{x}f(t)\text{d}t&lt;\dfrac{1}{2n}\int_{0}^{2n+2}f(t)\text{d}t&#x3D;\dfrac{n+1}{2n},$$<br>当$x\to+\infty$时，$n\to\infty$，由夹逼准则，有$\lim\limits_{x\to+\infty}\dfrac{\int_{0}^{x}f(x)\text{d}t}{x}&#x3D;\dfrac{1}{2}.$</p>
 </blockquote>
@@ -347,7 +348,7 @@
 <p>来看这个引例(摘自《18讲》P11例1.16)</p>
 <blockquote>
 <p>(1)证明：当$x\geqslant1$时，$\dfrac{1}{1+x}&lt;\text{ln}\Big(1+\dfrac{1}{x}\Big)&lt;\dfrac{1}{x}$；<br>(2)设函数$f(x)$在区间$[1,+\infty)$上连续可导，且$$f^{\prime}(x)&#x3D;\dfrac{1}{1+f^2(x)}\bigg[\sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}\bigg].$$<br>证明：$\lim\limits_{x\to+\infty}f(x)$存在.</p>
-<p>【证】当$x\geqslant1$时，对$\text{ln}t$在$[x,x+1]$上应用拉格朗日中值定理，有$$\text{ln}(x+1)-\text{ln}(x)&#x3D;\frac{1}{\xi}，x&lt;\xi&lt;x+1，$$即$$\dfrac{1}{x+1}&lt;\text{ln}\Big(1+\dfrac{1}{x}\Big)&lt;\dfrac{1}{x}.$$<br>(2)由(1)知，$\sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}&gt;0$，又$\dfrac{1}{1+f^2(x)}&gt;0$，故$f^{\prime}(x)&gt;0$，于是$x\geqslant1$时$f(x)$严格单调增加，又$$f^{\prime}(x)\leqslant \sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}&lt;\sqrt{\dfrac{1}{x}}-\sqrt{\dfrac{1}{1+x}}，$$<br>上式两边从$1$到$x$积分，有$$\int_{1}^{x}f^{\prime}(x)\text{d}t<br>&#x3D; f(x)-f(1)\leqslant \int_{1}^{x}\Big(\sqrt{\dfrac{1}{t}}-\sqrt{\dfrac{1}{1+t}}\Big)\text{d}t<br>&lt;\int_{1}^{+\infty}\Big(\sqrt{\dfrac{1}{t}}-\sqrt{\dfrac{1}{1+t}}\Big)\text{d}t<br>&#x3D; 2(\sqrt{2}-1)，$$<br>即$$f(x)&lt;2(\sqrt{2}-1)+f(1)，$$<br>故$f(x)$有上界.由单调有界准则，知$\lim\limits_{x\to+\infty}f(x)$存在.</p>
+<p>【证】当$x\geqslant1$时，对$\text{ln}t$在$[x,x+1]$上应用拉格朗日中值定理，有$$\text{ln}(x+1)-\text{ln}(x)&#x3D;\frac{1}{\xi}，x&lt;\xi&lt;x+1，$$即$$\dfrac{1}{x+1}&lt;\text{ln}\Big(1+\dfrac{1}{x}\Big)&lt;\dfrac{1}{x}.$$<br>(2)由(1)知，$\sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}&gt;0$，又$\dfrac{1}{1+f^2(x)}&gt;0$，故$f^{\prime}(x)&gt;0$，于是$x\geqslant1$时$f(x)$严格单调增加，又$$f^{\prime}(x)\leqslant \sqrt{\dfrac{1}{x}}-\sqrt{\text{ln}\Big(1+\dfrac{1}{x}\Big)}&lt;\sqrt{\dfrac{1}{x}}-\sqrt{\dfrac{1}{1+x}}，$$<br>上式两边从$1$到$x$积分，有$$\int_{1}^{x}f^{\prime}(x)\text{d}t<br>&#x3D; f(x)-f(1)\leqslant \int_{1}^{x}\Big(\sqrt{\dfrac{1}{t}}-\sqrt{\dfrac{1}{1+t}}\Big)\text{d}t<br>$$$$&lt;\int_{1}^{+\infty}\Big(\sqrt{\dfrac{1}{t}}-\sqrt{\dfrac{1}{1+t}}\Big)\text{d}t<br>&#x3D; 2(\sqrt{2}-1)，$$<br>即$$f(x)&lt;2(\sqrt{2}-1)+f(1)，$$<br>故$f(x)$有上界.由单调有界准则，知$\lim\limits_{x\to+\infty}f(x)$存在.</p>
 </blockquote>
 <p>抽象型的极限存在性问题，通常有以下4个步骤：<br>1.利用题设所给的导函数和原函数的关系得出<strong>单调性</strong><br>2.再次利用导函数和原函数的关系和单调性得出<strong>关于导函数的不等式(不等式右边可适当放缩便于后续积分)</strong><br>3.对不等式两边进行积分，其中导函数的这一边利用<strong>牛顿-莱布尼茨公式</strong>写成函数值的差，另一边计算积分得出一个存在上界&#x2F;下界的函数<br>4.移项得出原函数存在上界&#x2F;下界</p>
 <p>依据这个思路，我们来看下一个例题(摘自《1000题》P7习题14)</p>
